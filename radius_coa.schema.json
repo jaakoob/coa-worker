@@ -1,0 +1,27 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://github.com/jaakoob/coa-worker/radius_coa.schema.json",
+    "title": "Radius Change of Authentication",
+    "description": "A document containing all data to perform a radius change of authentication request",
+    "type": "object",
+    "properties": {
+        "nasAddress": {
+            "description": "IPv4, IPv6 address or hostname of the nas where the coa will be sent to",
+            "type": "string"
+        },
+        "nasPortId": {
+            "description": "Port Id on the NAS which should be reauthenticated",
+            "type": "integer"
+        },
+        "coaCommand": {
+            "description": "CoA command which should be executed",
+            "type": "string"
+        },
+        "macAddress": {
+            "description": "mac address associated with this dhcp lease",
+            "type": "string",
+            "pattern": "^([0-9a-f][02468ace])((([0-9a-f]{2})){5})$" 
+        }
+    },
+    "required": ["nasAddress", "nasPortId", "coaCommand", "macAddress"]
+}

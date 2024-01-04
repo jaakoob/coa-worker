@@ -1,0 +1,17 @@
+RABBITMQ_SERVER = [
+    "rabbitmq-1",
+    "rabbitmq-2",
+    "rabbitmq-3",
+]
+
+RABBITMQ_USERNAME = ''
+RABBITMQ_PASSWORD = ''
+RABBITMQ_PORT = 5671
+RABBITMQ_QUEUE_NAME = 'radius-change-auth-queue'
+RABBITMQ_EXCHANGE_NAME = 'radius-change-auth'
+RABBITMQ_VHOST = '/'
+
+RADIUS_SECRET = ''
+RADIUS_PORT = 1700
+
+JSON_SCHEMA_PATH = 'radius_coa.schema.json'

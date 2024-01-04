@@ -1,0 +1,3 @@
+pika
+jsonschema
+prometheus_client
